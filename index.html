@@ -53,7 +53,7 @@
         },
         "priceRange": "₹400-600",
         "servesCuisine": "Cafe",
-        "acceptsReservations": "True",
+        "acceptsReservations": true,
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "3.9",
@@ -396,7 +396,7 @@
                 <h3 class="text-2xl font-bold text-text mb-6">Visit Us</h3>
                 <div class="space-y-4">
                     <div class="flex items-start gap-4">
-                        <span class="text-xl">📍</span>
+                        <span class="text-xl" aria-hidden="true">📍</span>
                         <p class="text-text-light text-sm">
                             <strong>Beanlore – Jayanagar</strong><br>
                             123, 4th Block, Jayanagar,<br>
@@ -404,13 +404,13 @@
                         </p>
                     </div>
                     <div class="flex items-center gap-4">
-                        <span class="text-xl">🕒</span>
+                        <span class="text-xl" aria-hidden="true">🕒</span>
                         <p class="text-text-light text-sm">
                             Open Daily: 8:00 AM – 11:00 PM
                         </p>
                     </div>
                     <div class="flex items-center gap-4">
-                        <span class="text-xl">📞</span>
+                        <span class="text-xl" aria-hidden="true">📞</span>
                         <a href="tel:+919876543210" class="text-coffee font-medium text-sm hover:underline">+91 98765 43210</a>
                     </div>
                 </div>
@@ -455,17 +455,17 @@
                         <a href="https://instagram.com/beanlore" target="_blank" rel="noopener noreferrer" 
                            class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
                            aria-label="Follow us on Instagram">
-                            <span class="text-lg">📷</span>
+                            <span class="text-lg" aria-hidden="true">📷</span>
                         </a>
                         <a href="https://facebook.com/beanlore" target="_blank" rel="noopener noreferrer" 
                            class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
                            aria-label="Follow us on Facebook">
-                            <span class="text-lg">👥</span>
+                            <span class="text-lg" aria-hidden="true">👥</span>
                         </a>
                         <a href="mailto:hello@beanlore.com" 
                            class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
                            aria-label="Email us">
-                            <span class="text-lg">✉️</span>
+                            <span class="text-lg" aria-hidden="true">✉️</span>
                         </a>
                     </div>
                 </div>
@@ -487,12 +487,12 @@
                     <ul class="space-y-2 text-sm text-white/80">
                         <li>
                             <a href="tel:+919876543210" class="hover:text-white transition-colors">
-                                📞 +91 98765 43210
+                                <span aria-hidden="true">📞</span> +91 98765 43210
                             </a>
                         </li>
                         <li>
                             <a href="mailto:hello@beanlore.com" class="hover:text-white transition-colors">
-                                ✉️ hello@beanlore.com
+                                <span aria-hidden="true">✉️</span> hello@beanlore.com
                             </a>
                         </li>
                         <li class="pt-2">
