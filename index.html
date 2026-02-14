@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Beanlore – Jayanagar: A cozy cafe with artisanal coffee, lush greenery, and a relaxed vibe. Known for Liquid Tiramisu and Hazelnut Coffee.">
+    <title>Beanlore – Jayanagar | Where Coffee Meets Calm</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        beige: {
+                            DEFAULT: '#F8F5F2',
+                            dark: '#E8E5E2',
+                        },
+                        text: {
+                            DEFAULT: '#2E2E2E',
+                            light: '#4A4A4A',
+                        },
+                        coffee: {
+                            DEFAULT: '#6B4F4F',
+                            dark: '#5A3F3F',
+                        },
+                        latte: {
+                            DEFAULT: '#C8A27A',
+                            light: '#D8B28A',
+                        }
+                    },
+                    borderRadius: {
+                        '3xl': '1.5rem',
+                        '4xl': '2rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom styles for smooth animations */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hide scrollbar for gallery horizontal scroll on mobile */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-beige text-text font-sans antialiased overflow-x-hidden pb-20 md:pb-0">
+
+    <!-- 1️⃣ HERO SECTION -->
+    <header class="relative h-[85vh] w-full overflow-hidden rounded-b-4xl shadow-lg">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                 alt="Beanlore Cafe Interior"
+                 class="w-full h-full object-cover">
+            <!-- Soft Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 h-full flex flex-col justify-end p-6 pb-12 text-white max-w-4xl mx-auto">
+            <div class="fade-in-up">
+                <span class="inline-block px-3 py-1 mb-3 text-xs font-medium tracking-wider uppercase bg-white/20 backdrop-blur-md rounded-full border border-white/30">
+                    Jayanagar, Bengaluru
+                </span>
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-2">
+                    Where Coffee <br> Meets Calm.
+                </h1>
+                <p class="text-lg md:text-xl text-white/90 mb-4 font-light">
+                    Your cozy escape in Jayanagar.
+                </p>
+
+                <div class="flex items-center gap-4 mb-6 text-sm">
+                    <div class="flex items-center bg-white/20 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/30">
+                        <span class="text-yellow-400 mr-1">★</span>
+                        <span class="font-medium">3.9</span>
+                        <span class="mx-1 opacity-60">|</span>
+                        <span class="opacity-90">132 Reviews</span>
+                    </div>
+                    <div class="bg-white/20 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/30">
+                        ₹400–600
+                    </div>
+                </div>
+
+                <div class="flex gap-3">
+                    <a href="#location" class="flex-1 bg-white text-coffee font-semibold py-3.5 px-6 rounded-2xl text-center shadow-lg hover:bg-gray-100 transition-colors duration-300">
+                        Reserve a Table
+                    </a>
+                    <a href="https://maps.google.com" target="_blank" class="flex-1 bg-coffee/90 backdrop-blur-sm text-white font-semibold py-3.5 px-6 rounded-2xl text-center shadow-lg border border-white/20 hover:bg-coffee transition-colors duration-300">
+                        Get Directions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2️⃣ ABOUT SECTION -->
+    <section class="py-16 px-6 max-w-4xl mx-auto text-center fade-in-up delay-100">
+        <h2 class="text-coffee font-medium text-sm tracking-widest uppercase mb-3">The Beanlore Story</h2>
+        <p class="text-2xl md:text-3xl font-serif text-text mb-6 leading-snug">
+            A sanctuary for slow conversations and artisanal brews.
+        </p>
+        <p class="text-text-light leading-relaxed mb-8">
+            Nestled in the heart of Jayanagar, Beanlore offers a relaxing atmosphere surrounded by lush greenery. Whether you're here for our handcrafted desserts, a quiet reading spot, or just to unwind, we promise a warm, premium experience that feels like a hug in a mug.
+        </p>
+        <div class="w-16 h-1 bg-latte mx-auto rounded-full"></div>
+    </section>
+
+    <!-- 3️⃣ SIGNATURE PICKS (Card Grid) -->
+    <section class="py-12 px-4 max-w-6xl mx-auto">
+        <div class="flex justify-between items-end mb-8 px-2">
+            <div>
+                <h3 class="text-2xl font-bold text-text">Signature Picks</h3>
+                <p class="text-text-light text-sm mt-1">Loved by Jayanagar locals</p>
+            </div>
+            <a href="#" class="text-coffee font-medium text-sm hover:text-latte transition-colors">View Menu →</a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Card 1 -->
+            <div class="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1621551122354-e96737d64b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Hazelnut Coffee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5">
+                    <h4 class="font-bold text-lg mb-1">Hazelnut Coffee</h4>
+                    <p class="text-text-light text-sm line-clamp-2">Rich espresso infused with roasted hazelnut notes, topped with velvety foam.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Liquid Tiramisu" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5">
+                    <div class="flex justify-between items-center mb-1">
+                        <h4 class="font-bold text-lg">Liquid Tiramisu</h4>
+                        <span class="text-xs font-bold text-coffee bg-coffee/10 px-2 py-1 rounded-full">Must Try</span>
+                    </div>
+                    <p class="text-text-light text-sm line-clamp-2">Our signature dessert drink. Creamy mascarpone meets bold espresso.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1553909489-cd47e59239e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gourmet Sandwiches" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5">
+                    <h4 class="font-bold text-lg mb-1">Gourmet Sandwiches</h4>
+                    <p class="text-text-light text-sm line-clamp-2">Freshly baked artisan bread filled with premium ingredients and house sauces.</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fresh Bakes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5">
+                    <h4 class="font-bold text-lg mb-1">Fresh Bakes</h4>
+                    <p class="text-text-light text-sm line-clamp-2">Daily selection of croissants, muffins, and pastries baked to perfection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4️⃣ WHY VISIT BEANLORE -->
+    <section class="py-16 bg-white rounded-t-4xl rounded-b-4xl shadow-sm mx-2 my-8">
+        <div class="max-w-4xl mx-auto px-6">
+            <h3 class="text-2xl font-bold text-center mb-10 text-coffee">Why Visit Beanlore?</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 bg-beige rounded-2xl flex items-center justify-center mb-4 text-2xl shadow-sm text-coffee">
+                        🌿
+                    </div>
+                    <h4 class="font-semibold mb-1">Outdoor Seating</h4>
+                    <p class="text-xs text-text-light">Lush greenery</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 bg-beige rounded-2xl flex items-center justify-center mb-4 text-2xl shadow-sm text-coffee">
+                        📸
+                    </div>
+                    <h4 class="font-semibold mb-1">Aesthetic</h4>
+                    <p class="text-xs text-text-light">Instagram-worthy</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 bg-beige rounded-2xl flex items-center justify-center mb-4 text-2xl shadow-sm text-coffee">
+                        📖
+                    </div>
+                    <h4 class="font-semibold mb-1">Cozy Spot</h4>
+                    <p class="text-xs text-text-light">Perfect for reading</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 bg-beige rounded-2xl flex items-center justify-center mb-4 text-2xl shadow-sm text-coffee">
+                        ☕
+                    </div>
+                    <h4 class="font-semibold mb-1">Slow Vibe</h4>
+                    <p class="text-xs text-text-light">Relaxed ambience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5️⃣ GALLERY (Bento Grid Style) -->
+    <section class="py-12 px-4 max-w-6xl mx-auto">
+        <h3 class="text-2xl font-bold text-text mb-6 px-2">Vibe Check</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-4 h-96 md:h-[500px]">
+            <!-- Large Item -->
+            <div class="col-span-2 row-span-2 rounded-3xl overflow-hidden shadow-lg relative group">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cafe Vibe" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors"></div>
+            </div>
+            <!-- Small Item 1 -->
+            <div class="rounded-3xl overflow-hidden shadow-lg relative group">
+                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Coffee Art" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            </div>
+            <!-- Small Item 2 -->
+            <div class="rounded-3xl overflow-hidden shadow-lg relative group">
+                <img src="https://images.unsplash.com/photo-1504194921103-f8b80c338d4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Outdoor Seating" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            </div>
+            <!-- Wide Item -->
+            <div class="col-span-2 rounded-3xl overflow-hidden shadow-lg relative group">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Interior Details" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            </div>
+        </div>
+    </section>
+
+    <!-- 6️⃣ REVIEWS SECTION -->
+    <section class="py-16 bg-white/50 backdrop-blur-sm">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <h3 class="text-2xl font-bold text-text mb-2">What People Say</h3>
+                <div class="flex justify-center items-center gap-1 text-yellow-500 text-lg">
+                    ★★★★☆ <span class="text-text-light text-sm ml-2">(3.9/5 from 132 reviews)</span>
+                </div>
+            </div>
+
+            <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-8 no-scrollbar md:grid md:grid-cols-3 md:overflow-visible">
+                <!-- Review 1 -->
+                <div class="min-w-[85%] md:min-w-0 snap-center bg-white p-6 rounded-3xl shadow-sm border border-gray-100 flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex text-yellow-400 text-sm mb-3">★★★★★</div>
+                        <p class="text-text leading-relaxed text-sm italic">"It’s a perfect spot to relax with a good book while enjoying great coffee. The vibe is unmatched in Jayanagar."</p>
+                    </div>
+                    <div class="mt-4 flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-xs font-bold text-gray-500">AS</div>
+                        <p class="text-xs font-bold text-text-light">Ananya S.</p>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="min-w-[85%] md:min-w-0 snap-center bg-white p-6 rounded-3xl shadow-sm border border-gray-100 flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex text-yellow-400 text-sm mb-3">★★★★☆</div>
+                        <p class="text-text leading-relaxed text-sm italic">"The Liquid Tiramisu is to die for! Creamy, rich, and just perfect. Love the outdoor seating area."</p>
+                    </div>
+                    <div class="mt-4 flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-xs font-bold text-gray-500">RK</div>
+                        <p class="text-xs font-bold text-text-light">Rahul K.</p>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="min-w-[85%] md:min-w-0 snap-center bg-white p-6 rounded-3xl shadow-sm border border-gray-100 flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex text-yellow-400 text-sm mb-3">★★★★★</div>
+                        <p class="text-text leading-relaxed text-sm italic">"Peaceful vibe. Great place to work or catch up with friends. The staff is very polite and the service is quick."</p>
+                    </div>
+                    <div class="mt-4 flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-xs font-bold text-gray-500">MP</div>
+                        <p class="text-xs font-bold text-text-light">Meera P.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7️⃣ LOCATION & CONTACT -->
+    <section id="location" class="py-12 px-4 max-w-4xl mx-auto mb-20 md:mb-12">
+        <div class="bg-white rounded-4xl overflow-hidden shadow-lg">
+            <div class="p-8 pb-4">
+                <h3 class="text-2xl font-bold text-text mb-6">Visit Us</h3>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4">
+                        <span class="text-xl">📍</span>
+                        <p class="text-text-light text-sm">
+                            <strong>Beanlore – Jayanagar</strong><br>
+                            123, 4th Block, Jayanagar,<br>
+                            Bengaluru, Karnataka 560041
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-xl">🕒</span>
+                        <p class="text-text-light text-sm">
+                            Open Daily: 8:00 AM – 11:00 PM
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-xl">📞</span>
+                        <a href="tel:+919876543210" class="text-coffee font-medium text-sm hover:underline">+91 98765 43210</a>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex flex-col sm:flex-row gap-3">
+                    <a href="https://wa.me/919876543210" class="flex-1 bg-green-500 text-white font-semibold py-3 px-6 rounded-xl text-center hover:bg-green-600 transition-colors flex justify-center items-center gap-2">
+                        <span>💬</span> WhatsApp Us
+                    </a>
+                </div>
+
+                <p class="text-xs text-center text-red-400 mt-6 font-medium animate-pulse">
+                    ⚡ Weekend tables fill up fast! Reserve now.
+                </p>
+            </div>
+            <!-- Embedded Map Placeholder -->
+            <div class="w-full h-64 bg-gray-200 relative">
+                 <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31104.257697412763!2d77.57018335!3d12.9254533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae158b11e34d2f%3A0x5f4adbdbab8bd80f!2sJayanagar%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1698765432100!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8️⃣ STICKY MOBILE CTA BAR -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-lg border-t border-gray-200 p-4 pb-6 md:hidden z-50 shadow-[0_-5px_10px_rgba(0,0,0,0.05)]">
+        <div class="flex justify-between items-center gap-4 max-w-md mx-auto">
+            <a href="tel:+919876543210" class="flex flex-col items-center text-text-light hover:text-coffee active:scale-95 transition-transform">
+                <span class="text-xl mb-1">📞</span>
+                <span class="text-[10px] font-medium uppercase tracking-wide">Call</span>
+            </a>
+            <a href="https://maps.google.com" target="_blank" class="flex flex-col items-center text-text-light hover:text-coffee active:scale-95 transition-transform">
+                <span class="text-xl mb-1">🧭</span>
+                <span class="text-[10px] font-medium uppercase tracking-wide">Directions</span>
+            </a>
+            <a href="https://wa.me/919876543210" class="flex flex-col items-center text-text-light hover:text-coffee active:scale-95 transition-transform">
+                <span class="text-xl mb-1">💬</span>
+                <span class="text-[10px] font-medium uppercase tracking-wide">WhatsApp</span>
+            </a>
+            <a href="#location" class="bg-coffee text-white px-6 py-3 rounded-full font-bold text-sm shadow-lg active:scale-95 transition-transform">
+                Reserve
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
