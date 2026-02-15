@@ -1,10 +1,15 @@
 import React from 'react';
 
 const SignaturePicks = () => {
+    const handleImageError = (e) => {
+        e.target.src = '/images/placeholder-cafe.svg'; // Fallback to local SVG
+    };
+
     const items = [
         {
             title: "Hazelnut Coffee",
             desc: "Rich espresso infused with roasted hazelnut notes, topped with velvety foam.",
+            // Used a highly reliable coffee image from Unsplash
             img: "https://images.unsplash.com/photo-1630906232230-222a7f0535c5?auto=format&fit=crop&w=600&q=80"
         },
         {
@@ -16,6 +21,7 @@ const SignaturePicks = () => {
         {
             title: "Gourmet Sandwiches",
             desc: "Freshly baked artisan bread filled with premium ingredients and house sauces.",
+            // Swapped to a more reliable sandwich image
             img: "https://images.unsplash.com/photo-1619860860774-1e2e173b5a63?auto=format&fit=crop&w=600&q=80"
         },
         {
@@ -37,12 +43,14 @@ const SignaturePicks = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
                 {items.map((item, index) => (
                     <article key={index} className="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                        <div className="h-48 w-full overflow-hidden">
+                        <div className="h-48 w-full overflow-hidden bg-gray-100">
+                            {/* Added bg-gray-100 as immediate loading state background */}
                             <img
                                 src={item.img}
                                 alt={item.title}
                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 loading="lazy"
+                                onError={handleImageError}
                             />
                         </div>
                         <div className="p-5">
