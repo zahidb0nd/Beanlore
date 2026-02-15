@@ -35,44 +35,49 @@ const SignaturePicks = () => {
     ];
 
     return (
-        <section id="menu" className="py-12 px-4 max-w-6xl mx-auto" aria-labelledby="menu-heading">
-            <div className="flex justify-between items-end mb-8 px-2">
+        <section id="menu" className="py-20 px-4 max-w-6xl mx-auto" aria-labelledby="menu-heading">
+            <div className="flex justify-between items-end mb-12 px-2">
                 <div>
-                    <h3 id="menu-heading" className="text-2xl font-bold text-text">Signature Picks</h3>
-                    <p className="text-text-light text-sm mt-1">Loved by Jayanagar locals</p>
+                    <h3 id="menu-heading" className="text-3xl font-bold text-coffee">Signature Picks</h3>
+                    <p className="text-text-light mt-2 text-lg">Loved by Jayanagar locals</p>
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 {items.map((item, index) => (
-                    <article key={index} className="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                        <div className="h-48 w-full overflow-hidden bg-gray-100 relative">
+                    <article
+                        key={index}
+                        className="group bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-white/50"
+                    >
+                        <div className="h-52 w-full overflow-hidden bg-gray-100 relative">
                             {/* Added bg-gray-100 as immediate loading state background */}
                             <img
                                 src={item.img}
                                 alt={item.title}
-                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                 loading="lazy"
                                 onError={handleImageError}
                             />
+                            {/* Gradient Overlay on image for text contrast if needed */}
+                            <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
-                        <div className="p-5">
-                            <div className="flex justify-between items-center mb-1">
-                                <h4 className="font-bold text-lg">{item.title}</h4>
+                        <div className="p-6 relative">
+                            <div className="flex justify-between items-start mb-2 gap-2">
+                                <h4 className="font-bold text-lg text-text leading-tight group-hover:text-coffee transition-colors">{item.title}</h4>
                                 {item.badge && (
-                                    <span className="text-xs font-bold text-coffee bg-coffee/10 px-2 py-1 rounded-full">
+                                    <span className="text-[10px] font-bold text-white bg-coffee px-2 py-1 rounded-full shadow-md whitespace-nowrap">
                                         {item.badge}
                                     </span>
                                 )}
                             </div>
-                            <p className="text-text-light text-sm line-clamp-2">{item.desc}</p>
+                            <p className="text-text-light text-sm line-clamp-3 leading-relaxed">{item.desc}</p>
                         </div>
                     </article>
                 ))}
             </div>
 
             <div className="flex justify-center">
-                <a href="#" className="bg-coffee text-white font-semibold py-3 px-10 rounded-full shadow-lg hover:bg-coffee-dark transform hover:-translate-y-0.5 transition-all duration-300">
+                <a href="#" className="bg-coffee hover:bg-coffee-dark text-white font-semibold py-4 px-12 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
                     View Full Menu
                 </a>
             </div>
