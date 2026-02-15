@@ -23,13 +23,8 @@ const SignaturePicks = () => {
         {
             title: "Gourmet Sandwiches",
             desc: "Freshly baked artisan bread filled with premium ingredients and house sauces.",
-<<<<<<< HEAD
             // Swapped to Pexels image provided by user
             img: "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-=======
-            // Reliable Sandwich image
-            img: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80"
->>>>>>> 54185290860a1c86a9f97fa4e2525e8d7127236d
         },
         {
             title: "Fresh Bakes",
