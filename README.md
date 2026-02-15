@@ -1,44 +1,16 @@
-# Beanlore – Jayanagar
+# React + Vite
 
-A modern, responsive landing page for **Beanlore**, a cozy café located in Jayanagar, Bengaluru. Built with HTML and Tailwind CSS.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Features
+Currently, two official plugins are available:
 
-- **Hero Section** – Full-screen hero with background image, café rating (3.9 ★), price range, and call-to-action buttons for reservations and directions.
-- **About Section** – The Beanlore story and café description.
-- **Signature Picks** – A card grid showcasing popular menu items: Hazelnut Coffee, Liquid Tiramisu, Gourmet Sandwiches, and Fresh Bakes.
-- **Why Visit** – Highlights of what makes Beanlore special: outdoor seating, aesthetic interiors, cozy reading spots, and a relaxed vibe.
-- **Photo Gallery** – A bento-style image grid showcasing the café's ambience.
-- **Customer Reviews** – Horizontally scrollable review cards (mobile) or a 3-column grid (desktop).
-- **Location & Contact** – Address, opening hours, phone number, WhatsApp link, and an embedded Google Maps iframe.
-- **Sticky Mobile CTA Bar** – A fixed bottom bar on mobile with quick actions for calling, directions, WhatsApp, and reservations.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Tech Stack
+## React Compiler
 
-- **HTML5**
-- **Tailwind CSS** (via CDN)
-- **Google Fonts** (Inter)
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Getting Started
+## Expanding the ESLint configuration
 
-No build step is required. Open `index.html` directly in a browser:
-
-```sh
-open index.html
-```
-
-Or serve it with any static file server:
-
-```sh
-npx serve .
-```
-
-## Customization
-
-- **Colors** – Edit the Tailwind config inside `<script>` in `index.html` to change the beige, coffee, and latte color palettes.
-- **Content** – Update text, images, and links directly in `index.html`.
-- **Map** – Replace the Google Maps `<iframe>` `src` with your own embed URL.
-
-## License
-
-This project is provided as-is for the Beanlore café.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
