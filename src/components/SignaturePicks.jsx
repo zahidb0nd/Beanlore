@@ -5,23 +5,23 @@ const SignaturePicks = () => {
         {
             title: "Hazelnut Coffee",
             desc: "Rich espresso infused with roasted hazelnut notes, topped with velvety foam.",
-            img: "https://images.unsplash.com/photo-1621551122354-e96737d64b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            img: "https://images.unsplash.com/photo-1630906232230-222a7f0535c5?auto=format&fit=crop&w=600&q=80"
         },
         {
             title: "Liquid Tiramisu",
             desc: "Our signature dessert drink. Creamy mascarpone meets bold espresso.",
-            img: "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+            img: "https://images.unsplash.com/photo-1574885014162-dad280ec3ca9?auto=format&fit=crop&w=600&q=80",
             badge: "Must Try"
         },
         {
             title: "Gourmet Sandwiches",
             desc: "Freshly baked artisan bread filled with premium ingredients and house sauces.",
-            img: "https://images.unsplash.com/photo-1553909489-cd47e59239e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            img: "https://images.unsplash.com/photo-1619860860774-1e2e173b5a63?auto=format&fit=crop&w=600&q=80"
         },
         {
             title: "Fresh Bakes",
             desc: "Daily selection of croissants, muffins, and pastries baked to perfection.",
-            img: "https://images.unsplash.com/photo-1509365465985-25d11c17e812?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80"
         }
     ];
 
@@ -37,7 +37,7 @@ const SignaturePicks = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
                 {items.map((item, index) => (
                     <article key={index} className="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                        <div className="h-48 overflow-hidden">
+                        <div className="h-48 w-full overflow-hidden">
                             <img
                                 src={item.img}
                                 alt={item.title}

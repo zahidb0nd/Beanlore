@@ -14,7 +14,7 @@ const VibeCheck = () => {
                 {/* 1. Large Vibe Image (Top Left) */}
                 <div className="md:col-span-2 md:row-span-3 rounded-3xl overflow-hidden shadow-lg relative group h-64 md:h-auto">
                     <img
-                        src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=800&q=80"
                         alt="Cafe Interior Vibe"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
@@ -24,7 +24,7 @@ const VibeCheck = () => {
                 {/* 2. Outdoor Seating (Top Right - Converted to Image Card) */}
                 <div className="md:col-span-2 md:row-span-1 rounded-3xl overflow-hidden shadow-lg relative group h-48 md:h-auto">
                     <img
-                        src="https://images.unsplash.com/photo-1504194921103-f8396924c348?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=600&q=80"
                         alt="Outdoor Seating"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
@@ -50,7 +50,7 @@ const VibeCheck = () => {
 
                 {/* 5. Coffee Art Image */}
                 <div className="rounded-3xl overflow-hidden shadow-lg relative group h-40 md:h-auto">
-                    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Latte Art" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=400&q=80" alt="Latte Art" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
 
                 {/* 6. Slow Vibe (Text Card) */}
