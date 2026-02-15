@@ -2,32 +2,35 @@ import React from 'react';
 
 const SignaturePicks = () => {
     const handleImageError = (e) => {
-        e.target.src = '/images/placeholder-cafe.svg'; // Fallback to local SVG
+        e.target.src = '/images/placeholder-cafe.jpg'; // Fallback to local JPG
+        e.target.onerror = null; // Prevent infinite loop if fallback fails
     };
 
     const items = [
         {
             title: "Hazelnut Coffee",
             desc: "Rich espresso infused with roasted hazelnut notes, topped with velvety foam.",
-            // Used a highly reliable coffee image from Unsplash
-            img: "https://images.unsplash.com/photo-1630906232230-222a7f0535c5?auto=format&fit=crop&w=600&q=80"
+            // Reliable Hazelnut Coffee image
+            img: "https://images.unsplash.com/photo-1599398054066-846f28917f38?auto=format&fit=crop&w=800&q=80"
         },
         {
             title: "Liquid Tiramisu",
             desc: "Our signature dessert drink. Creamy mascarpone meets bold espresso.",
-            img: "https://images.unsplash.com/photo-1574885014162-dad280ec3ca9?auto=format&fit=crop&w=600&q=80",
+            // Reliable Tiramisu image
+            img: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=80",
             badge: "Must Try"
         },
         {
             title: "Gourmet Sandwiches",
             desc: "Freshly baked artisan bread filled with premium ingredients and house sauces.",
-            // Swapped to a more reliable sandwich image
-            img: "https://images.unsplash.com/photo-1619860860774-1e2e173b5a63?auto=format&fit=crop&w=600&q=80"
+            // Reliable Sandwich image
+            img: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80"
         },
         {
             title: "Fresh Bakes",
             desc: "Daily selection of croissants, muffins, and pastries baked to perfection.",
-            img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80"
+            // Reliable Pastries image
+            img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80"
         }
     ];
 
@@ -43,7 +46,7 @@ const SignaturePicks = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
                 {items.map((item, index) => (
                     <article key={index} className="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                        <div className="h-48 w-full overflow-hidden bg-gray-100">
+                        <div className="h-48 w-full overflow-hidden bg-gray-100 relative">
                             {/* Added bg-gray-100 as immediate loading state background */}
                             <img
                                 src={item.img}
