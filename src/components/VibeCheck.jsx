@@ -2,7 +2,8 @@ import React from 'react';
 
 const VibeCheck = () => {
     const handleImageError = (e) => {
-        e.target.src = '/images/placeholder-cafe.svg';
+        e.target.src = '/images/placeholder-cafe.jpg';
+        e.target.onerror = null;
     };
 
     return (
@@ -29,7 +30,7 @@ const VibeCheck = () => {
                 {/* 2. Outdoor Seating (Top Right) */}
                 <div className="md:col-span-2 md:row-span-1 rounded-3xl overflow-hidden shadow-lg relative group h-48 md:h-auto bg-gray-100">
                     <img
-                        src="https://images.unsplash.com/photo-1504194921103-f8396924c348?auto=format&fit=crop&w=600&q=80"
+                        src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80"
                         alt="Outdoor Seating"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         onError={handleImageError}
